@@ -48,7 +48,7 @@ Follow these steps to set up and run the project locally:
 
 6. **Access the API:**
 
-    You can now access the API at `http://localhost:3000`.
+    You can now access the API at `http://localhost:5000`.
 
 ## Contributing
 
