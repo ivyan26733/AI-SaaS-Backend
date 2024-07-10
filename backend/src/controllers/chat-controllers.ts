@@ -8,12 +8,14 @@ export const generateChatCompletion = async (
   next: NextFunction
 ) => {
   const { message } = req.body;
+  var err = new Error().stack 
   try {
     const user = await User.findById(res.locals.jwtData.id);
     if (!user)
-      return res
-        .status(401)
-        .json({ message: "User not registered OR Token malfunctioned" });
+    return res
+  .status(401)
+  .json({ message: "User not registered OR Token malfunctioned" });
+  console.log(err);
     // grab chats of user
     const chats = user.chats.map(({ role, content }) => ({
       role,
